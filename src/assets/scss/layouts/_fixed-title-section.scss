@@ -1,0 +1,20 @@
+.fixed-title-section {
+    display: flex;
+    margin-top: 50px;
+    > div {
+        width: 50%;
+        &:has(h3) {
+            h3 {
+                position: sticky;
+                width: fit-content;
+                top: 20px;
+                &::after {
+                    content: url('../../images/icons/arrow.png');
+                    position: absolute;
+                    right: -40px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}

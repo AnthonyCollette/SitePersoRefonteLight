@@ -1,0 +1,53 @@
+footer {
+    position: relative;
+    padding: 40px 0;
+
+    >div:has(svg) {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        > a {
+            font-family: $font-primary;
+            font-size: $font-xl;
+            color: $color-002;
+        }
+
+        .medium-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                color: $color-002;
+                font-size: $font-md;
+                transition: color 0.3s ease-in-out;
+                &:hover {
+                    color: $color-002--hover;
+                }
+            }
+        }
+
+        .social-medias {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            a:hover svg path {
+                fill: $color-002--hover;
+            }
+
+            svg {
+                width: 30px;
+                path {
+                    fill: $color-002;
+                    transition: fill 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}

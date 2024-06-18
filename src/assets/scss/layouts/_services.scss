@@ -1,0 +1,18 @@
+.services {
+    position: relative;
+    margin-bottom: 150px;
+    overflow-x: hidden;
+
+    .blob {
+        position: absolute;
+        z-index: -1;
+        left: -400px;
+    }
+
+    .reverse {
+        .blob {
+            right: -400px;
+            left: auto;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.contact {
+    background-color: $color-001;
+    margin-top: 100px;
+    position: relative;
+    padding-top: 200px;
+    background-image: url('../../images/contact-grid.png');
+    background-size: cover;
+    padding-bottom: 200px;
+
+    > div:has(svg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .contact-row {
+        display: flex;
+        align-items: center;
+        margin-top: 110px;
+        gap: 100px;
+    }
+
+    form {
+        width: 500px;
+    }
+
+    .form-group {
+        margin-bottom: 36px;
+
+        &:has(input[type="text"]), &:has(input[type="email"]), &:has(textarea) {
+            position: relative;
+            label {
+                font-size: 1.8rem;
+                background-color: $color-001;
+                padding: 0 12px;
+                position: absolute;
+                top: 0;
+                left: 45px;
+                transform: translateY(-50%);
+                line-height: 1;
+                color: $color-002;
+            }
+
+            input, textarea {
+                background-color: $color-001;
+                padding: 10px;
+                width: 100%;
+                border: 1px solid $color-002;
+                border-radius: 10px;
+                font-size: 1.8rem;
+            }
+
+            textarea {
+                resize: none;
+                height: 300px;
+            }
+        }
+
+        &:has(textarea) {
+            margin-bottom: 20px;
+        }
+
+        &:has(input[type="checkbox"]) {
+            margin-bottom: 30px;
+        }
+
+        &:has(input[type="checkbox"]) {
+            input {
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+            label {
+                font-size: 1.6rem;
+                color: $color-002;
+                position: relative;
+                cursor: pointer;
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid $color-002;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: -25px;
+                    top: 2px;
+                    cursor: pointer;
+                    background-color: $color-001;
+                    transition: all 0.3s ease-in-out;
+                }
+                &::after {
+                    content: url('../../images/check.png');
+                    position: absolute;
+                    left: -24px;
+                    top: 2px;
+                    opacity: 0;
+                    transition: all 0.3 ease-in-out;
+                }
+            }
+
+            input[type="checkbox"]:checked {
+                & ~ label {
+                    &::before {
+                        background-color: $color-002;
+                    }
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+
+    img {
+        width: 50%;
+    }
+}

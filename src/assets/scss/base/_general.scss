@@ -1,0 +1,28 @@
+:root {
+    font-size: 10px;
+}
+
+::selection {
+    background-color: $color-002;
+    color: $white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-secondary;
+    background-color: $white;
+
+    &:has(.modal) {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}

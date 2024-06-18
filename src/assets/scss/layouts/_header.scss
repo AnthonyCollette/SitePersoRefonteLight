@@ -1,0 +1,31 @@
+header {
+    padding: 320px 0 460px;
+    background-color: $color-001;
+    background-image: url('../../images/header-grid.png');
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 1px;
+        height: 320px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background-color: $color-002;
+    }
+
+    p {
+        font-size: $font-xxlg;
+        font-family: $font-secondary--bold;
+        margin: 50px 0 70px;
+    }
+
+    > div:has(svg) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

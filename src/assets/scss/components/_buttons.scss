@@ -1,0 +1,28 @@
+.btn {
+    border-radius: 50px;
+    border: none;
+    padding: 15px 50px;
+    font-size: $font-md;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-family: $font-secondary--bold;
+    width: fit-content;
+    display: block;
+
+    &--primary {
+        background-color: $color-002;
+        color: $color-001;
+
+        &:hover {
+            background: $color-002--hover;
+        }
+    }
+
+    &--close {
+        border: none;
+        background-color: transparent;
+        font-size: $font-lg;
+        font-family: $font-primary;
+        cursor: pointer;
+    }
+}

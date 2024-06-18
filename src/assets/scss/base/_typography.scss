@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'OPTI Auvant Gothic';
+    src: url('../../../fonts/OPTIAuvantGothic/OPTIAuvantGothic-Bold.otf');
+}
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../../../fonts/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../../../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+h1 {
+    font-family: $font-primary;
+    font-size: $font-xxxl;
+    color: $color-002;
+}
+
+h2 {
+    font-family: $font-primary;
+    font-size: $font-xxl;
+    color: $color-002;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-family: $font-primary;
+    font-size: $font-xl;
+    color: $color-002;
+}
+
+p {
+    font-size: $font-md;
+    line-height: 150%;
+    color: $color-002;
+}

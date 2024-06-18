@@ -1,0 +1,83 @@
+.modal {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba($color: $color-001, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // transition: all 0.3s ease-in-out;
+
+    &-enter {
+        opacity: 0;
+        &-active {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &-exit {
+        opacity: 1;
+        &-active {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+
+    .tags {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 0;
+        margin-top: 5px;
+
+        li {
+            font-size: $font-sm;
+            font-family: $font-secondary--bold;
+            background-color: $color-001;
+            color: $color-002;
+            border-radius: 50px;
+            padding: 5px 10px;
+        }
+    }
+
+    .overlay {
+        background-color: $white;
+        position: relative;
+        border-radius: 30px;
+        padding: 10px 50px 10px 10px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+
+        img {
+            border-radius: 20px;
+            max-height: 80vh;       
+        }
+
+        button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            &:hover svg path {
+                fill: $color-002--hover;
+            }
+            svg {
+                width: 20px;
+                path {
+                    fill: $color-002;
+                    transition: fill 0.3s ease-in-out;
+                }
+            }
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        a {
+            margin-top: 30px;
+        }
+    }
+}

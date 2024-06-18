@@ -1,0 +1,42 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 23px 0;
+
+        >a {
+            font-size: $font-xl;
+            font-family: $font-primary;
+            color: $color-002;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $color-002--hover;
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+
+            a:hover {
+                svg path {
+                    fill: $color-002--hover;
+                }
+            }
+            svg {
+                width: 30px;
+                path {
+                    fill: $color-002;
+                    transition: fill 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
