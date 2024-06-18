@@ -1,7 +1,7 @@
 .services {
     position: relative;
     margin-bottom: 150px;
-    overflow-x: hidden;
+    overflow-x: clip;
 
     .blob {
         position: absolute;
