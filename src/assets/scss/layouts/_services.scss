@@ -1,7 +1,11 @@
 .services {
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     overflow-x: clip;
+
+    @include min($lg) {
+        margin-bottom: 150px;
+    }
 
     .blob {
         position: absolute;

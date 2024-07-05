@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/animations';
+@import './utils/mixins';
 @import './base/normalize';
 @import './base/typography';
 @import './base/general';
@@ -15,4 +16,5 @@
 @import './layouts/contact';
 @import './layouts/footer';
 @import './layouts/modal';
+@import './layouts/form';
 @import './pages/homepage';

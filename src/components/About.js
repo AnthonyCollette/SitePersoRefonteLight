@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section className='about'>
             <CustomWave color="#fff" />
-            <div className='container'>
+            <div className='container imgwithtext'>
                 <img src={image} alt="Designer assis à son bureau" />
                 <div className='content'>
                     <h2>qui suis-je ?</h2>

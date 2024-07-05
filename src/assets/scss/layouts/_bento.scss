@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 30px;
+    gap: 10px;
     article {
         border-radius: 20px;
         overflow: hidden;
@@ -19,7 +19,7 @@
         }
 
         &:hover {
-            box-shadow: 5px 5px 5px rgba($color-002, 0.8);
+            box-shadow: 2px 2px 5px rgba($color-002, 0.6);
             img {
                 filter: none;
             }

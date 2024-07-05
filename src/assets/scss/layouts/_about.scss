@@ -1,10 +1,14 @@
 .about {
     background-color: $color-001;
-    padding: 200px 0;
+    padding: 150px 0;
     background-image: url('../../images/about-grid.png');
     background-size: cover;
     position: relative;
     margin-top: 10px;
+
+    @include min($lg) {
+        padding: 200px 0;
+    }
 
     >div {
         &:nth-child(1) {
@@ -25,11 +29,5 @@
 
     img {
         max-width: 50%;
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        gap: 50px;
     }
 }
