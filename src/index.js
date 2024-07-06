@@ -7,11 +7,15 @@ import {
   RouterProvider,
   createBrowserRouter
 } from "react-router-dom";
+import Mentions from './views/Mentions';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />
+  }, {
+    path: '/mentions-légales',
+    element: <Mentions />
   }
 ])
 

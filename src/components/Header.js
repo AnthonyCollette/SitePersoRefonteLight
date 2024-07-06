@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header>
             <div className='container'>
-                <h1>graphiste & développeur web</h1>
+                <h1>Graphiste & développeur web</h1>
                 <p>Concevoir l’<span>interface</span>, créer l’<span>expérience</span>.</p>
                 <a href="#portfolio" className='btn btn--secondary' onClick={() => audio.play()}>Découvrir</a>
             </div>
