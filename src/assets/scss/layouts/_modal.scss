@@ -9,6 +9,7 @@
 
     &-enter {
         opacity: 0;
+
         &-active {
             opacity: 1;
             transition: opacity 0.3s;
@@ -17,6 +18,7 @@
 
     &-exit {
         opacity: 1;
+
         &-active {
             opacity: 0;
             transition: opacity 0.3s;
@@ -30,6 +32,7 @@
         gap: 10px;
         padding: 0;
         margin-top: 5px;
+        flex-wrap: wrap;
 
         li {
             font-size: $font-sm;
@@ -45,30 +48,60 @@
         background-color: $white;
         position: relative;
         border-radius: 30px;
-        padding: 10px 50px 10px 10px;
+        padding: 10px 10px 10px 10px;
         display: flex;
-        align-items: center;
         gap: 50px;
-        justify-content: center;
+        justify-content: flex-start;
+        max-width: 90%;
+        flex-direction: column;
+        overflow-y: auto;
+        max-height: 90vh;
+
+        @include min($lg) {
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 50px 10px 10px;
+            overflow-y: visible;
+        }
 
         img {
             border-radius: 20px;
-            max-height: 80vh;       
+            max-height: 80vh;
+            width: 100%;
+            
+            @include min($lg) {
+                max-width: 60%;
+            }
         }
 
         button {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 0px;
+            top: -40px;
+            @include min($lg) {
+                right: 20px;
+                top: 20px;
+            }
+
             &:hover svg path {
                 fill: $color-002--hover;
             }
+
             svg {
                 width: 20px;
+
                 path {
                     fill: $color-002;
                     transition: fill 0.3s ease-in-out;
                 }
+            }
+        }
+
+        a.btn {
+            width: 100%;
+            text-align: center;
+            @include min($lg) {
+                width: fit-content;
             }
         }
 
