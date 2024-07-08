@@ -5,7 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // transition: all 0.3s ease-in-out;
+
+    .dark & {
+        background-color: rgba($color: $color-004, $alpha: 0.5);
+    }
 
     &-enter {
         opacity: 0;
@@ -64,6 +67,10 @@
             overflow-y: visible;
         }
 
+        .dark & {
+            background-color: $color-002;
+        }
+
         img {
             border-radius: 20px;
             max-height: 80vh;
@@ -85,6 +92,10 @@
 
             &:hover svg path {
                 fill: $color-002--hover;
+
+                .dark & {
+                    fill: $color-003;
+                }
             }
 
             svg {
@@ -93,6 +104,10 @@
                 path {
                     fill: $color-002;
                     transition: fill 0.3s ease-in-out;
+
+                    .dark & {
+                        fill: $color-001;
+                    }
                 }
             }
         }

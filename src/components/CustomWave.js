@@ -1,10 +1,12 @@
 import React from 'react';
 import Wave from 'react-wavify';
 
-const CustomWave = ({ color }) => {
+const CustomWave = () => {
 
     return (
-        <Wave fill={color} options={{ amplitude: 20, speed: 0.3 }} />
+        <div className='wave'>
+            <Wave options={{ amplitude: 20, speed: 0.3 }} />
+        </div>
     );
 };
 

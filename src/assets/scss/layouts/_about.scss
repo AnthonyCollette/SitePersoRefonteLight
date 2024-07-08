@@ -10,10 +10,15 @@
         padding: 200px 0;
     }
 
+    .dark & {
+        background-color: $color-002;
+        background-image: url('../../images/about-grid-dark.png');
+    }
+
     >div {
         &:nth-child(1) {
             position: absolute;
-            top: 0;
+            top: -1%;
             left: 0;
             right: 0;
             transform: rotate(180deg);
@@ -21,7 +26,7 @@
 
         &:last-child {
             position: absolute;
-            bottom: 0;
+            bottom: -1%;
             left: 0;
             right: 0;
         }

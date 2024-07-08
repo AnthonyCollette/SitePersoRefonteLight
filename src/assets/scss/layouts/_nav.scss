@@ -16,6 +16,10 @@ nav {
             color: $color-002;
             transition: color 0.3s ease-in-out;
 
+            .dark & {
+                color: $color-001;
+            }
+
             &:hover {
                 color: $color-002--hover;
             }
@@ -24,6 +28,7 @@ nav {
         ul {
             display: flex;
             gap: 10px;
+            align-items: center;
 
             a:hover {
                 svg path {
@@ -35,7 +40,80 @@ nav {
                 path {
                     fill: $color-002;
                     transition: fill 0.3s ease-in-out;
+
+                    .dark & {
+                        fill: $color-001;
+                    }
                 }
+            }
+            input[type="checkbox"] {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                appearance: none;
+                cursor: pointer;
+                z-index: 1;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                &:has(.switch-toggle) {
+                    gap: 10px;
+                    margin-left: 30px;
+                    svg {
+                        height: 25px;
+
+                        &:last-of-type {
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .switch-toggle {
+        position: relative;
+        height: 25px;
+        width: 50px;
+        border: 2px solid $color-002;
+        border-radius: 50px;
+
+        .dark & {
+            border-color: $color-001;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            background-color: $color-001;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            background-color: $color-002;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:has(input:checked) {
+            &::before {
+                background-color: $color-002;
+            }
+            &::after {
+                background-color: $color-001;
+                transform: translateY(-50%) translateX(21px);
             }
         }
     }

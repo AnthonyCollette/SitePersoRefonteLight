@@ -8,6 +8,11 @@ header {
         padding: 320px 0 460px;;
     }
 
+    .dark & {
+        background-color: $color-002;
+        background-image: url('../../images/header-grid-dark.png');
+    }
+
     &::before {
         content: '';
         width: 1px;
@@ -20,6 +25,10 @@ header {
         display: none;
         @include min($lg) {
             display: block;
+        }
+
+        .dark & {
+            background-color: $color-001;
         }
     }
 
@@ -48,7 +57,7 @@ header {
 
     > div:has(svg) {
         position: absolute;
-        bottom: 0;
+        bottom: -1%;
         left: 0;
         right: 0;
     }

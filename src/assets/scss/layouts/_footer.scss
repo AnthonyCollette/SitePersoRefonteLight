@@ -3,9 +3,13 @@ footer {
     padding: 40px 0;
     background-color: $white;
 
+    .dark & {
+        background-color: $color-004;
+    }
+
     >div:has(svg) {
         position: absolute;
-        bottom: 100%;
+        bottom: 95%;
         left: 0;
         right: 0;
     }
@@ -26,6 +30,16 @@ footer {
             font-family: $font-primary;
             font-size: $font-xl;
             color: $color-002;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: $color-002--hover;
+            }
+            .dark & {
+                color: $color-001;
+                &:hover {
+                    color: $color-002--hover;
+                }
+            }
         }
 
         .medium-column {
@@ -38,6 +52,13 @@ footer {
                 transition: color 0.3s ease-in-out;
                 &:hover {
                     color: $color-002--hover;
+                }
+
+                .dark & {
+                    color: $color-001;
+                    &:hover {
+                        color: $color-002--hover;
+                    }
                 }
             }
         }
@@ -56,6 +77,9 @@ footer {
                 path {
                     fill: $color-002;
                     transition: fill 0.3s ease-in-out;
+                    .dark & {
+                        fill: $color-001;
+                    }
                 }
             }
         }

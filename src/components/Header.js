@@ -13,7 +13,7 @@ const Header = () => {
                 <a href="#portfolio" className='btn btn--secondary' onClick={() => audio.play()}>Découvrir</a>
             </div>
 
-            <CustomWave color="#fff" />
+            <CustomWave />
         </header>
     );
 };

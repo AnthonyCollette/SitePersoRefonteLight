@@ -12,9 +12,14 @@
         padding-top: 200px;
     }
 
+    .dark & {
+        background-color: $color-002;
+        background-image: url('../../images/contact-grid-dark.png');
+    }
+
     >div:has(svg) {
         position: absolute;
-        top: 0;
+        top: -1%;
         left: 0;
         right: 0;
         transform: rotate(180deg);

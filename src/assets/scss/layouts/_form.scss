@@ -4,6 +4,7 @@ form {
 
     input[type="submit"] {
         margin: 0 auto;
+
         @include min($lg) {
             margin: 0 auto 0 0;
         }
@@ -28,6 +29,11 @@ form {
             transform: translateY(-50%);
             line-height: 1;
             color: $color-002;
+
+            .dark & {
+                background-color: $color-002;
+                color: $color-001;
+            }
         }
 
         input,
@@ -38,6 +44,13 @@ form {
             border: 1px solid $color-002;
             border-radius: 10px;
             font-size: 1.8rem;
+            color: $color-002;
+
+            .dark & {
+                background-color: $color-002;
+                border-color: $color-001;
+                color: $color-001;
+            }
         }
 
         textarea {
@@ -68,6 +81,10 @@ form {
             position: relative;
             cursor: pointer;
 
+            .dark & {
+                color: $color-001;
+            }
+
             &::before {
                 content: '';
                 width: 20px;
@@ -80,6 +97,10 @@ form {
                 cursor: pointer;
                 background-color: $color-001;
                 transition: all 0.3s ease-in-out;
+                .dark & {
+                    background-color: $color-002;
+                    border-color: $color-001;
+                }
             }
 
             &::after {
@@ -89,6 +110,9 @@ form {
                 top: 2px;
                 opacity: 0;
                 transition: all 0.3 ease-in-out;
+                .dark & {
+                    content: url('../../images/check-dark.png');
+                }
             }
         }
 
@@ -96,6 +120,10 @@ form {
             &~label {
                 &::before {
                     background-color: $color-002;
+
+                    .dark & {
+                        background-color: $color-001;
+                    }
                 }
 
                 &::after {

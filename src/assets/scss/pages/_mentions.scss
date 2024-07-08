@@ -1,6 +1,10 @@
 .mentions-legales {
     background-color: $color-001;
 
+    .dark & {
+        background-color: $color-002;
+    }
+
     section {
         padding: 150px 0 200px;
     }
@@ -11,5 +15,9 @@
 
     h3 {
         margin-top: 20px;
+    }
+
+    p span {
+        color: $color-003;
     }
 }

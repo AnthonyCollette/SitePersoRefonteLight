@@ -8,6 +8,7 @@ import {
   createBrowserRouter
 } from "react-router-dom";
 import Mentions from './views/Mentions';
+import { ThemeProvider } from './contexts/ThemeProvider';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

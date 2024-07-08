@@ -21,6 +21,15 @@
         &:hover {
             background: $color-002--hover;
         }
+
+        .dark & {
+            background-color: $color-001;
+            color: $color-002;
+
+            &:hover {
+                background-color: $color-003;
+            }
+        }
     }
     &--secondary {
         background-color: $color-003;
@@ -29,6 +38,13 @@
         &:hover {
             background: $color-002;
             color: $color-003;
+        }
+
+        .dark & {
+            &:hover {
+                background-color: $color-001;
+                color: $color-002;
+            }
         }
     }
 

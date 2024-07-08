@@ -23,6 +23,10 @@ h1 {
         font-size: $font-xxxl;
         text-align: left;
     }
+
+    .dark & {
+        color: $color-001;
+    }
 }
 
 h2 {
@@ -35,6 +39,10 @@ h2 {
         font-size: $font-xxl;
         margin-bottom: 50px;
     }
+
+    .dark & {
+        color: $color-001;
+    }
 }
 
 h3 {
@@ -45,6 +53,10 @@ h3 {
     @include min($lg) {
         font-size: $font-xl;
     }
+
+    .dark & {
+        color: $color-001;
+    }
 }
 
 p {
@@ -54,5 +66,15 @@ p {
 
     @include min($lg) {
         font-size: $font-md;
+    }
+
+    .dark & {
+        color: $color-001;
+    }
+}
+
+ul li {
+    .dark & {
+        color: $color-001;
     }
 }
