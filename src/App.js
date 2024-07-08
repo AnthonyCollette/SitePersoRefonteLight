@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -8,6 +9,11 @@ import Services from "./components/Services";
 import Whyme from "./components/Whyme";
 
 function App() {
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [])
+
   return <div className='homepage'>
     <Nav />
     <Header />

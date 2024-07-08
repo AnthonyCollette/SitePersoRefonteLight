@@ -28,7 +28,7 @@
     .contact-row {
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 20px;
         flex-direction: column;
 
         @include min($lg) {
@@ -39,6 +39,8 @@
     }
 
     img {
-        width: 50%;
+        @include min($lg) {
+            width: 50%;
+        }
     }
 }

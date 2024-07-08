@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 const Mentions = () => {
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, [])
     return (
         <div className='mentions-legales'>
             <Nav />
