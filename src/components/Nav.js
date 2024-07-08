@@ -29,7 +29,9 @@ const Nav = () => {
                     <li><IoSunny /><div className='switch-toggle' onClick={() => {
                         audio.play()
                         toggleTheme()
-                    }}><input type="checkbox"></input></div>
+                    }}>
+                        {theme === 'dark' ? <input type="checkbox" checked></input> : <input type="checkbox"></input>}
+                    </div>
                     <FaMoon /></li>
                 </ul>
             </div>

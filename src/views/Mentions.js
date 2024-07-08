@@ -18,8 +18,8 @@ const Mentions = () => {
                 <p><span>Téléphone :</span> 06.84.35.05.69</p>
 
                 <h3>hébergeur</h3>
-                <p><span>Nom :</span> OVH SAS</p>
-                <p><span>Adresse :</span> 2 rue Kellermann 59100 Roubaix</p>
+                <p><span>Nom :</span> O2Switch</p>
+                <p><span>Adresse :</span> Chem. des Pardiaux, 63000 Clermont-Ferrand</p>
 
                 <h3>responsable publication</h3>
                 <p><span>Nom :</span> Collette</p>

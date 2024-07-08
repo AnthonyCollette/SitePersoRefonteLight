@@ -14,6 +14,16 @@ form {
 .form-group {
     margin-bottom: 36px;
 
+    &.error {
+        input, textarea, input[type="checkbox"] + label::before {
+            border-color: $error !important;
+        }
+        p {
+            color: $error;
+            font-size: $font-sm;
+        }
+    }
+
     &:has(input[type="text"]),
     &:has(input[type="email"]),
     &:has(textarea) {
