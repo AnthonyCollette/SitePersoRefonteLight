@@ -3,6 +3,7 @@ import image1 from '../assets/images/why1.png';
 import image2 from '../assets/images/why2.png';
 import image3 from '../assets/images/why3.png';
 import FixedTitleSection from './FixedTitleSection';
+import { motion } from 'framer-motion';
 
 const Whyme = () => {
 
@@ -26,12 +27,12 @@ const Whyme = () => {
     return (
         <section className='whyme'>
             <div className='container'>
-                <h2>pourquoi moi ?</h2>
-                <p>En tant que freelance, je combine les compétences de développeur web et de graphiste pour vous offrir une approche intégrée répondant à l'ensemble de vos besoins en ligne. Voici pourquoi vous pourriez trouver avantageux de faire appel à un professionnel polyvalent comme moi :</p>
+                <motion.h2 initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}}>pourquoi moi ?</motion.h2>
+                <motion.p initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1, delay: 0.3}}>En tant que freelance, je combine les compétences de développeur web et de graphiste pour vous offrir une approche intégrée répondant à l'ensemble de vos besoins en ligne. Voici pourquoi vous pourriez trouver avantageux de faire appel à un professionnel polyvalent comme moi :</motion.p>
                 {reasons.map((reason, index) => {
                     return <FixedTitleSection title={reason.title} image={reason.image} desc={reason.desc} alt={reason.alt} key={index} />
                 })}
-                <p>En somme, faire appel à un freelance offrant à la fois des compétences en développement web et en conception graphique vous permet de bénéficier d'une approche holistique, d'une communication efficace et d'une flexibilité accrue pour concrétiser votre vision en ligne de manière professionnelle et cohérente.</p>
+                <p initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}}>En somme, faire appel à un freelance offrant à la fois des compétences en développement web et en conception graphique vous permet de bénéficier d'une approche holistique, d'une communication efficace et d'une flexibilité accrue pour concrétiser votre vision en ligne de manière professionnelle et cohérente.</p>
             </div>
         </section>
     );

@@ -21,6 +21,7 @@ import bibiBig from '../assets/images/projects/bibig.jpg';
 import isolabelBig from '../assets/images/projects/isolabel-big.jpg';
 import effetBig from '../assets/images/projects/effet-big.png';
 import idealBig from '../assets/images/projects/ideal-big.png';
+import { motion } from 'framer-motion';
 
 const Bento = () => {
 
@@ -116,7 +117,7 @@ const Bento = () => {
 
     return (
         <div className='bento'>
-            {projects.map((project, index) => { return <article key={index} onClick={() => setProject({ image: project?.bigImage, alt: project?.alt, title: project?.title, desc: project?.desc, link: project?.link, tags: project?.tags })}><img src={project.image} alt={project.alt} /></article> })}
+            {projects.map((project, index) => { return <motion.article initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 1, delay: index/5}} viewport={{once: true}} key={index} onClick={() => setProject({ image: project?.bigImage, alt: project?.alt, title: project?.title, desc: project?.desc, link: project?.link, tags: project?.tags })}><img src={project.image} alt={project.alt} /></motion.article> })}
             {createPortal(<CSSTransition in={showModal} timeout={300} nodeRef={modalRef} classNames="modal" unmountOnExit>
                 <div className='modal' ref={modalRef} onClick={() => setShowModal(false)}>
 

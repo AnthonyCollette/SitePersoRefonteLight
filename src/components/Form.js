@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { FormEvent, useRef, useState } from 'react';
+import { motion } from 'framer-motion'
 
 const Form = () => {
     const form = useRef()
@@ -70,7 +71,7 @@ const Form = () => {
         }
     };
     return (<>
-        {!emailSent && <form ref={form} onSubmit={sendEmail}>
+        {!emailSent && <motion.form initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1, delay: 1.3}} ref={form} onSubmit={sendEmail}>
             <div className={nameError ? 'form-group error' : 'form-group'}>
                 <label htmlFor="name">Nom</label>
                 <input type='text' ref={nameRef} name='user_name' />
@@ -94,9 +95,9 @@ const Form = () => {
                 {consentError && <p>Merci de cocher la case ci-dessus.</p>}
             </div>
             <button className="btn btn--primary">Envoyer</button>
-        </form>}
-        {emailSent && success && <div className='success'><h3>Votre message a bien été envoyé ! Je vous répondrai dès que possible.</h3></div>}
-        {emailSent && !success && <div className='fail'><h3>Oups, il y a eu un problème ! Veuillez réessayer.</h3></div>}
+        </motion.form>}
+        {emailSent && success && <div className='success'><motion.h3 initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1}}>Votre message a bien été envoyé ! Je vous répondrai dès que possible.</motion.h3></div>}
+        {emailSent && !success && <div className='fail'><motion.h3 initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1}}>Oups, il y a eu un problème ! Veuillez réessayer.</motion.h3></div>}
     </>
     );
 };

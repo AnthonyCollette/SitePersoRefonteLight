@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../contexts/ThemeProvider';
 import { IoSunny } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const Nav = () => {
 
@@ -20,7 +21,7 @@ const Nav = () => {
     }, [theme])
 
     return (
-        <nav>
+        <motion.nav initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 1}} transition={{duration: 1, delay: 1.6}}>
             <div className='container'>
                 <Link to="/">anthony collette</Link>
                 <ul>
@@ -35,7 +36,7 @@ const Nav = () => {
                     <FaMoon /></li>
                 </ul>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 

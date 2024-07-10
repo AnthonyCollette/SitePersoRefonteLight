@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import { motion } from 'framer-motion';
 
 const Blob = ({duration}) => {
 
@@ -17,9 +18,9 @@ const Blob = ({duration}) => {
     })
 
     return (
-        <div className='blob'>
+        <motion.div viewport={{once: true}} initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 2}} className='blob'>
             <svg id="visual" viewBox="0 0 600 600" width="600" height="600" xmlns="http://www.w3.org/2000/svg" version="1.1"><g transform="translate(317.10135584997454 273.85629537269745)"><animated.path d={blobAnimation.x} fill="#FFF3E1"></animated.path></g></svg>
-        </div>
+        </motion.div>
     );
 };
 

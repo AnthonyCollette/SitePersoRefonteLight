@@ -4,6 +4,7 @@ header {
     background-image: url('../../images/header-grid.png');
     background-size: cover;
     position: relative;
+    min-height: 100vh;
     @include min($lg) {
         padding: 320px 0 460px;;
     }
@@ -23,6 +24,9 @@ header {
         transform: translateX(-50%);
         background-color: $color-002;
         display: none;
+        animation: fadeInTop 1s ease-in-out forwards;
+        animation-delay: 2s;
+        opacity: 0;
         @include min($lg) {
             display: block;
         }

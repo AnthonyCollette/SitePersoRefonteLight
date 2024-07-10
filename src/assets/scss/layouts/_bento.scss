@@ -26,8 +26,8 @@
         border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
-        // box-shadow: 5px 5px 5px rgba($color-002, 0.4);
-        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        transition: box-shadow 0.3s ease-in-out;
         @include min($md) {
             border-radius: 20px;
         }
