@@ -9,12 +9,20 @@ nav {
         align-items: center;
         justify-content: space-between;
         padding: 23px 0;
+        flex-wrap: wrap;
 
         >a {
             font-size: $font-xl;
             font-family: $font-primary;
             color: $color-002;
             transition: color 0.3s ease-in-out;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @include min($md) {
+                width: fit-content;
+            }
 
             .dark & {
                 color: $color-001;
