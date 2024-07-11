@@ -65,6 +65,10 @@ body {
   }
 }
 
+section {
+  overflow-x: hidden;
+}
+
 .container {
   width: 1440px;
   max-width: 90%;
