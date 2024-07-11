@@ -82,6 +82,10 @@ body {
 
 .blob {
   opacity: 0;
+  display: none;
+  @include min($lg) {
+    display: block;
+  }
   * {
     fill: $color-001;
 
