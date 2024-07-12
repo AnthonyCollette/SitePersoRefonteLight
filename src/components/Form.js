@@ -74,19 +74,19 @@ const Form = () => {
         {!emailSent && <motion.form initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1, delay: 1.3}} ref={form} onSubmit={sendEmail}>
             <div className={nameError ? 'form-group error' : 'form-group'}>
                 <label htmlFor="name">Nom</label>
-                <input type='text' ref={nameRef} name='user_name' />
+                <input type='text' ref={nameRef} name='user_name' id="name" />
                 {nameError && <p>Merci de renseigner votre nom</p>}
             </div>
             <div className={emailError ? 'form-group error' : 'form-group'}>
-                <label htmlFor="name">Adresse mail</label>
-                <input type='email' ref={emailRef} name='user_email' />
+                <label htmlFor="email">Adresse mail</label>
+                <input type='email' ref={emailRef} name='user_email' id="email" />
                 {emailError && <p>Merci de renseigner une adresse mail au bon format</p>}
             </div>
             <div className={messageError ? 'form-group error' : 'form-group'}>
                 <label htmlFor="message">
                     Message
                 </label>
-                <textarea name='message' ref={messageRef} />
+                <textarea name='message' id="message" ref={messageRef} />
                 {messageError && <p>Merci de remplir votre message</p>}
             </div>
             <div className={consentError ? 'form-group error' : 'form-group'}>

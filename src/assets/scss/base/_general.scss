@@ -67,6 +67,9 @@ body {
 
 section {
   overflow-x: hidden;
+  @include min($lg) {
+    overflow-x: visible;
+  }
 }
 
 .container {
@@ -97,4 +100,12 @@ section {
       fill: $color-002;
     }
   }
+}
+
+.label-none {
+  display: none;
+}
+
+.icon-link {
+  font-size: 0;
 }

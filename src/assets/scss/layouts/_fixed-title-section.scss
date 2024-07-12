@@ -21,7 +21,7 @@
                 top: 20px;
 
                 &::after {
-                    @include min($lg) {
+                    @include min($xl) {
                         content: url('../../images/icons/arrow.png');
                         position: absolute;
                         right: -40px;
