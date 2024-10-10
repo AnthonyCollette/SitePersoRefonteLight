@@ -9,7 +9,7 @@ const FixedTitleSection = ({title, image, desc, alt}) => {
             </div>
             <div className='right-column'>
                 <motion.p initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}} transition={{duration: 1}}>{desc}</motion.p>
-                <motion.img initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={image} alt={alt} />
+                <motion.img loading='lazy' initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={image} alt={alt} />
             </div>
         </div>
     );

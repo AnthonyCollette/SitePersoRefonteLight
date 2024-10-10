@@ -1,7 +1,7 @@
 header {
     padding: 150px 0;
     background-color: $color-001;
-    background-image: url('../../images/header-grid.png');
+    background-image: url('../../images/header-grid.webp');
     background-size: cover;
     position: relative;
     min-height: 100vh;
@@ -11,7 +11,7 @@ header {
 
     .dark & {
         background-color: $color-002;
-        background-image: url('../../images/header-grid-dark.png');
+        background-image: url('../../images/header-grid-dark.webp');
     }
 
     &::before {

@@ -1,6 +1,6 @@
 import React from 'react';
 import design from '../assets/images/Add color-bro.svg';
-import development from '../assets/images/service2.png';
+import development from '../assets/images/service2.webp';
 import Blob from './Blob';
 import { motion } from 'framer-motion';
 
@@ -21,7 +21,7 @@ const Services = () => {
                             <motion.li initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1}}>Développement de maquettes et de prototypes pour vos projets</motion.li>
                         </ul>
                     </div>
-                    <motion.img initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={design} alt="Designer assis à son bureau" />
+                    <motion.img loading='lazy' initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={design} alt="Designer assis à son bureau" />
                 </div>
                 <div className='imgwithtext reverse'>
                     <Blob duration={5000}/>
@@ -34,7 +34,7 @@ const Services = () => {
                             <motion.li initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1}}>Optimisation SEO pour améliorer la visibilité de votre site sur les moteurs de recherche</motion.li>
                         </ul>
                     </div>
-                    <motion.img initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={development} alt="Designer assis à son bureau" />
+                    <motion.img loading='lazy' initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 1}} src={development} alt="Designer assis à son bureau" />
                 </div>
             </div>
         </section>

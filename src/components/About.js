@@ -8,7 +8,7 @@ const About = () => {
         <section className='about'>
             <CustomWave color="#fff" />
             <div className='container imgwithtext'>
-                <motion.img initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}} transition={{duration: 2}} src={image} alt="Designer assis à son bureau" />
+                <motion.img initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}} transition={{duration: 2}} src={image} loading='lazy' alt="Designer assis à son bureau" />
                 <div className='content'>
                     <motion.h2 initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1, delay: 0.8}}>Qui suis-je ?</motion.h2>
                     <motion.p initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{duration: 1, delay: 1.2}}>Passionné de graphisme depuis plus de 10 ans ainsi que de développement web depuis 4 ans, c’est tout naturellement que j’ai décidé de vous proposer mes services en tant que freelance !

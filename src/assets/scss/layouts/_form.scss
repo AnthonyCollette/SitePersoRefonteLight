@@ -114,14 +114,14 @@ form {
             }
 
             &::after {
-                content: url('../../images/check.png');
+                content: url('../../images/check.webp');
                 position: absolute;
                 left: -24px;
                 top: 2px;
                 opacity: 0;
                 transition: all 0.3 ease-in-out;
                 .dark & {
-                    content: url('../../images/check-dark.png');
+                    content: url('../../images/check-dark.webp');
                 }
             }
         }

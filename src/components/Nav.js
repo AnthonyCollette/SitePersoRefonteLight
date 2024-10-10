@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../contexts/ThemeProvider';
 import { IoSunny } from "react-icons/io5";
@@ -31,7 +31,7 @@ const Nav = () => {
                         audio.play()
                         toggleTheme()
                     }}><label for="toggleTheme" className='label-none' htmlFor='toggleTheme'>Changer de theme</label>
-                        {theme === 'dark' ? <input type="checkbox" id="toggleTheme" checked></input> : <input id="toggleTheme" type="checkbox"></input>}
+                        {theme === 'dark' ? <input type="checkbox" id="toggleTheme" name='toggleTheme' checked></input> : <input id="toggleTheme" type="checkbox"  name='toggleTheme'></input>}
                     </div>
                     <FaMoon /></li>
                 </ul>

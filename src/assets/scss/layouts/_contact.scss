@@ -3,7 +3,7 @@
     margin-top: 50px;
     position: relative;
     padding-top: 200px;
-    background-image: url('../../images/contact-grid.png');
+    background-image: url('../../images/contact-grid.webp');
     background-size: cover;
     padding-bottom: 200px;
 
@@ -14,7 +14,7 @@
 
     .dark & {
         background-color: $color-002;
-        background-image: url('../../images/contact-grid-dark.png');
+        background-image: url('../../images/contact-grid-dark.webp');
     }
 
     >div:has(svg) {

@@ -1,7 +1,7 @@
 import React from 'react';
-import image1 from '../assets/images/why1.png';
-import image2 from '../assets/images/why2.png';
-import image3 from '../assets/images/why3.png';
+import image1 from '../assets/images/why1.webp';
+import image2 from '../assets/images/why2.webp';
+import image3 from '../assets/images/why3.webp';
 import FixedTitleSection from './FixedTitleSection';
 import { motion } from 'framer-motion';
 

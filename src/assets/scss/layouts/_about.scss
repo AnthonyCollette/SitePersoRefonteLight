@@ -1,7 +1,7 @@
 .about {
     background-color: $color-001;
     padding: 150px 0;
-    background-image: url('../../images/about-grid.png');
+    background-image: url('../../images/about-grid.webp');
     background-size: cover;
     position: relative;
     margin-top: 10px;
@@ -12,7 +12,7 @@
 
     .dark & {
         background-color: $color-002;
-        background-image: url('../../images/about-grid-dark.png');
+        background-image: url('../../images/about-grid-dark.webp');
     }
 
     >div {
