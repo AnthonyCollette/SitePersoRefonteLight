@@ -76,7 +76,7 @@ p {
     }
 }
 
-ul li {
+ul li, ol li {
     .dark & {
         color: $color-001;
     }
