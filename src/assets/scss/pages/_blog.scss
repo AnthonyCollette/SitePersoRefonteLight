@@ -1,0 +1,94 @@
+.blog {
+  overflow-x: hidden;
+}
+
+.blog-container {
+  min-height: 90vh;
+  padding: 50px 0 150px;
+  position: relative;
+
+  &__results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include min($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .blob {
+    position: absolute;
+    z-index: -1;
+
+    &:nth-child(1) {
+      top: 200px;
+      left: -200px;
+    }
+    &:nth-child(2) {
+      top: 300px;
+      right: -200px;
+    }
+  }
+}
+
+.blog-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: $font-xl;
+    text-align: center;
+  }
+
+  a {
+    font-size: $font-lg;
+    color: $color-003;
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    margin-top: 10px;
+    &:hover {
+      color: $color-004;
+    }
+  }
+}
+
+.wp-block-list {
+  font-size: $font-sm;
+
+  @include min($lg) {
+    font-size: $font-md;
+  }
+}
+
+.post {
+  padding: 100px 0;
+  h1 {
+    text-align: center;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wp-block-heading {
+    margin: 20px 0 10px;
+  }
+}
+
+.post-container {
+  padding: 0 0 50px;
+}

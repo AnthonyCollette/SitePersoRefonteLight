@@ -9,6 +9,10 @@ import Loading from './components/Loading';
 // Lazy load des composants
 const App = lazy(() => import('./App'));
 const Mentions = lazy(() => import('./views/Mentions'));
+const Post = lazy(() => import('./views/Post'))
+const Blog = lazy(() => import('./views/Blog'))
+
+
 
 const router = createBrowserRouter([
   {
@@ -24,6 +28,20 @@ const router = createBrowserRouter([
     element: (
       <Suspense fallback={<Loading />}>
         <Mentions />
+      </Suspense>
+    )
+  }, {
+    path: '/blog',
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Blog />
+      </Suspense>
+    )
+  }, {
+    path: '/blog/:id',
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Post />
       </Suspense>
     )
   }

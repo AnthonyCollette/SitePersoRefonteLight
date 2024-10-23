@@ -1,128 +1,152 @@
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 0;
+    flex-wrap: wrap;
+
+    > a {
+      font-size: $font-xl;
+      font-family: $font-primary;
+      color: $color-002;
+      transition: color 0.3s ease-in-out;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include min($md) {
+        width: fit-content;
+      }
+
+      .dark & {
+        color: $color-001;
+      }
+
+      &:hover {
+        color: $color-002--hover;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+
+      li {
+        a.btn {
+            font-size: $font-sm;
+            font-family: $font-secondary--bold;
+            padding: 10px 20px;
+            // border-radius: 10px;
+        }
+      }
+
+      a:hover {
+        svg path {
+          fill: $color-002--hover;
+        }
+      }
+      svg {
+        width: 30px;
+        path {
+          fill: $color-002;
+          transition: fill 0.3s ease-in-out;
+
+          .dark & {
+            fill: $color-001;
+          }
+        }
+      }
+      input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        appearance: none;
+        cursor: pointer;
+        z-index: 1;
+        background-color: transparent;
+      }
+      li {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 23px 0;
-        flex-wrap: wrap;
+        &:has(.switch-toggle) {
+          gap: 10px;
+          margin-left: 30px;
+          svg {
+            height: 25px;
 
-        >a {
-            font-size: $font-xl;
-            font-family: $font-primary;
-            color: $color-002;
-            transition: color 0.3s ease-in-out;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 10px;
-
-            @include min($md) {
-                width: fit-content;
+            &:last-of-type {
+              height: 20px;
             }
-
-            .dark & {
-                color: $color-001;
-            }
-
-            &:hover {
-                color: $color-002--hover;
-            }
+          }
         }
+      }
+    }
+  }
 
-        ul {
-            display: flex;
-            gap: 10px;
-            align-items: center;
+  li:has(.switch-toggle) {
+    display: none;
+    @include min($sm) {
+      display: flex;
+    }
+  }
 
-            a:hover {
-                svg path {
-                    fill: $color-002--hover;
-                }
-            }
-            svg {
-                width: 30px;
-                path {
-                    fill: $color-002;
-                    transition: fill 0.3s ease-in-out;
+  .switch-toggle {
+    position: relative;
+    height: 25px;
+    width: 50px;
+    border: 2px solid $color-002;
+    border-radius: 50px;
 
-                    .dark & {
-                        fill: $color-001;
-                    }
-                }
-            }
-            input[type="checkbox"] {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                inset: 0;
-                appearance: none;
-                cursor: pointer;
-                z-index: 1;
-            }
-            li {
-                display: flex;
-                align-items: center;
-                &:has(.switch-toggle) {
-                    gap: 10px;
-                    margin-left: 30px;
-                    svg {
-                        height: 25px;
-
-                        &:last-of-type {
-                            height: 20px;
-                        }
-                    }
-                }
-            }
-        }
+    &--mobile {
+      display: flex;
     }
 
-    .switch-toggle {
-        position: relative;
-        height: 25px;
-        width: 50px;
-        border: 2px solid $color-002;
-        border-radius: 50px;
 
-        .dark & {
-            border-color: $color-001;
-        }
-
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            inset: 0;
-            background-color: $color-001;
-            border-radius: 50px;
-            transition: all 0.3s ease-in-out;
-        }
-        &::after {
-            content: '';
-            width: 16px;
-            height: 16px;
-            border-radius: 50px;
-            background-color: $color-002;
-            position: absolute;
-            left: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 0.3s ease-in-out;
-        }
-
-        &:has(input:checked) {
-            &::before {
-                background-color: $color-002;
-            }
-            &::after {
-                background-color: $color-001;
-                transform: translateY(-50%) translateX(21px);
-            }
-        }
+    .dark & {
+      border-color: $color-001;
     }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      background-color: transparent;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      background-color: $color-002;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:has(input:checked) {
+      &::before {
+        background-color: $color-002;
+      }
+      &::after {
+        background-color: $color-001;
+        transform: translateY(-50%) translateX(21px);
+      }
+    }
+  }
 }
