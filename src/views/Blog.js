@@ -24,15 +24,14 @@ const Blog = () => {
   const addImagesToPosts = async () => {
     if (!loadingData && unfilteredPosts.length) {
       unfilteredPosts?.map(async (post) => {
-        console.log(post.id)
         if (!posts.some((item) => item.id === post.id)) {
           fetch(
             "https://www.wordpress.anthonycollette.fr/wp-json/wp/v2/media/" + post.featured_media
           )
             .then((res) => res.json())
-            .then((data) =>
-              setPosts((prevPosts) => [...prevPosts, { ...post, image: data.source_url }])
-            );
+            .then((data) =>{
+              setPosts((prevPosts) => [...prevPosts, { ...post, image: data.source_url, image_alt: data.alt_text }])
+            });
         }
       });
     }
@@ -45,10 +44,6 @@ const Blog = () => {
     getUnfilteredPost();
     addImagesToPosts()
   }, []);
-
-  useEffect(() => {
-    console.log(unfilteredPosts, posts);
-  }, [unfilteredPosts]);
 
   useEffect(() => {
     addImagesToPosts()
@@ -72,7 +67,7 @@ const Blog = () => {
             return (
               <motion.article key={index} className="resume-post" initial={{y: 50, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1, delay: index*0.5}}>
                 <div className="img-wrapper">
-                  <img src={post.image} alt="Design inclusif" />
+                  <img src={post.image} alt={post.image_alt} />
                 </div>
                 <div
                   dangerouslySetInnerHTML={{ __html: post.title.rendered }}

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
+import Blob from "../components/Blob";
 
 const Post = () => {
   const { id } = useParams();
@@ -25,11 +26,10 @@ const Post = () => {
           unfilteredPost.featured_media
       )
         .then((res) => res.json())
-        .then((data) => setPost({ ...unfilteredPost, image: data.source_url }));
+        .then((data) => setPost({ ...unfilteredPost, image: data.source_url, image_alt: data.alt_text }));
   }, [unfilteredPost]);
 
   useEffect(() => {
-    console.log(post)
     if (post !== null) {
       setIsLoading(false);
     }
@@ -43,9 +43,9 @@ const Post = () => {
         {isLoading && <Loading />}
         {!isLoading && (
           <div className="post">
-
+            <Blob duration={2000} />
             <div className="post__banner">
-              <img src={post?.image} alt="Représentation de l'article" />
+              <img src={post?.image} alt={post?.image_alt} />
             </div>
             <div className="h2" dangerouslySetInnerHTML={{__html: post?.title?.rendered}} />
             <div

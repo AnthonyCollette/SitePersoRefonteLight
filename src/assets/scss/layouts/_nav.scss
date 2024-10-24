@@ -34,12 +34,16 @@ nav {
     }
 
     ul {
-      display: flex;
+      display: inline-flex;
       gap: 10px;
       align-items: center;
       flex-wrap: wrap;
       padding: 0;
-
+      justify-content: center;
+      width: 100%;
+      @include min($md) {
+        width: fit-content;
+      }
       li {
         a.btn {
             font-size: $font-sm;
@@ -80,7 +84,9 @@ nav {
         align-items: center;
         &:has(.switch-toggle) {
           gap: 10px;
-          margin-left: 30px;
+          @include min($md) {
+            margin: 0 30px;
+          }
           svg {
             height: 25px;
 

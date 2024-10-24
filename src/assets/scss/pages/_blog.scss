@@ -4,13 +4,21 @@
 
 .blog-container {
   min-height: 90vh;
-  padding: 200px 0 150px;
+  padding: 150px 0 150px;
   position: relative;
+
+  @include min($lg) {
+    padding: 200px 0 150px;
+  }
 
   &__results {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
+
+    @include min($sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include min($xl) {
       grid-template-columns: repeat(3, 1fr);
@@ -68,6 +76,15 @@
 
 .post {
   padding: 100px 0;
+  position: relative;
+  
+  .blob {
+    position: absolute;
+    right: -100px;
+    top: 500px;
+    z-index: -1;
+  }
+  
   h1 {
     text-align: center;
   }
@@ -86,6 +103,7 @@
 
   .wp-block-heading {
     margin: 20px 0 10px;
+    @extend h3;
   }
 }
 
