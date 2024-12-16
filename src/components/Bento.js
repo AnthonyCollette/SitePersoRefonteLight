@@ -48,7 +48,6 @@ const Bento = () => {
             alt: 'Logo Ideal Zen',
             title: "Ideal Zen",
             desc: "Logo réalisé pour une auto-entreprise de Reiki.",
-            link: "https://idealzen.fr/",
             tags: ['logo'],
             bigImage: idealzenBig
         }, {
@@ -100,7 +99,6 @@ const Bento = () => {
             alt: "Site d'Ideal Zen",
             title: "Ideal Zen",
             desc: "Site web réalisé pour une auto-entreprise de Reiki",
-            link: "https://idealzen.fr/",
             tags: ['logo', 'site web'],
             bigImage: idealBig
         }
