@@ -1,0 +1,25 @@
+.not-found {
+    padding: 50px 0;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: $font-xxxl;
+        text-align: center;
+    }
+    p {
+        font-size: $font-lg;
+        text-align: center;
+    }
+    a {
+        color: $color-003;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

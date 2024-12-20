@@ -5,6 +5,7 @@ import './assets/scss/main.scss';
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import { ThemeProvider } from './contexts/ThemeProvider';
 import Loading from './components/Loading';
+import NotFound from './components/NotFound';
 
 // Lazy load des composants
 const App = lazy(() => import('./App'));
@@ -42,6 +43,13 @@ const router = createHashRouter([
     element: (
       <Suspense fallback={<Loading />}>
         <Post />
+      </Suspense>
+    )
+  }, {
+    path: '/*',
+    element: (
+      <Suspense fallback={<Loading />}>
+        <NotFound />
       </Suspense>
     )
   }
