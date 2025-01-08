@@ -10,7 +10,7 @@ const Footer = () => {
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}} transition={{duration: 1}} className='container'>
                 <Link to="/">anthony collette</Link>
                 <div className='medium-column'>
-                    <p>Copyright Anthony Collette, 2024</p>
+                    <p>Copyright Anthony Collette, 2025</p>
                     <Link to="/mentions-légales">Mentions légales</Link>
                 </div>
                 <div className='social-medias'>
