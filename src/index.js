@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './assets/scss/main.scss';
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ThemeProvider } from './contexts/ThemeProvider';
 import Loading from './components/Loading';
 import NotFound from './components/NotFound';
@@ -15,7 +15,7 @@ const Blog = lazy(() => import('./views/Blog'))
 
 
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: (
