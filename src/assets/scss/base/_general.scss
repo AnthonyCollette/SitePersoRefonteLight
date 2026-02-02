@@ -1,133 +1,138 @@
 :root {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
-
-
 ::selection {
-  background-color: $color-002;
-  color: $white;
+    background-color: $color-002;
+    color: $white;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: $font-secondary;
-  background-color: $white;
+    font-family: $font-secondary;
+    background-color: $white;
 
-  &.dark {
-    background-color: $color-004;
-    
+    &.dark {
+        background-color: $color-004;
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background-color: $color-002;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $color-001;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $color-001;
+        }
+    }
+
+    &:has(.modal) {
+        height: 100vh;
+        overflow-y: hidden;
+        padding-right: 10px;
+    }
+
     /* Track */
     &::-webkit-scrollbar-track {
-      background-color: $color-002;
+        background-color: $color-001;
+        border-radius: 10px;
     }
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: $color-001;
+        background: $color-002;
+        border-radius: 10px;
+        cursor: pointer;
     }
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: $color-001;
+        background: $color-002;
     }
-  }
-
-  &:has(.modal) {
-    height: 100vh;
-    overflow-y: hidden;
-    padding-right: 10px;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background-color: $color-001;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $color-002;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: $color-002;
-  }
 }
 
 section {
-  overflow-x: hidden;
-  @include min($lg) {
-    overflow-x: visible;
-  }
+    overflow-x: hidden;
+    @include min($lg) {
+        overflow-x: visible;
+    }
 }
 
 .container {
-  width: 1440px;
-  max-width: 90%;
-  margin: 0 auto;
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 250px;
+    @include min($lg) {
+        max-width: 300px;
+    }
 }
 
 .wave {
-  * {
-    fill: $white;
-    .dark & {
-      fill: $color-004
+    * {
+        fill: $white;
+        .dark & {
+            fill: $color-004;
+        }
     }
-  }
 }
 
 .blob {
-  opacity: 0;
-  display: none;
-  @include min($lg) {
-    display: block;
-  }
-  * {
-    fill: $color-001;
-
-    .dark & {
-      fill: $color-002;
+    opacity: 0;
+    display: none;
+    @include min($lg) {
+        display: block;
     }
-  }
+    * {
+        fill: $color-001;
+
+        .dark & {
+            fill: $color-002;
+        }
+    }
 }
 
 .label-none {
-  display: none;
+    display: none;
 }
 
 .icon-link {
-  font-size: 0;
+    font-size: 0;
 }
 
 .visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0,0,0,0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 .loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  background-color: $color-001;
-  z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background-color: $color-001;
+    z-index: 999;
 }

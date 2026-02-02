@@ -1,21 +1,22 @@
 header {
-    padding: 150px 0;
+    padding: 150px 0 200px;
     background-color: $color-001;
-    background-image: url('../../images/header-grid.webp');
+    background-image: url("../../images/header-grid.webp");
     background-size: cover;
     position: relative;
-    min-height: 100vh;
+
     @include min($lg) {
-        padding: 320px 0 460px;;
+        padding: 320px 0 460px;
+        min-height: 100vh;
     }
 
     .dark & {
         background-color: $color-002;
-        background-image: url('../../images/header-grid-dark.webp');
+        background-image: url("../../images/header-grid-dark.webp");
     }
 
     &::before {
-        content: '';
+        content: "";
         width: 1px;
         height: 320px;
         position: absolute;
